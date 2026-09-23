@@ -20,7 +20,8 @@
     "about": "Our morning",
     "market": "Discover",
     "visit": "Plan your visit",
-    "access": "Getting here"
+    "access": "Getting here",
+    "vendors": "For vendors"
   },
   "seasonNotice": {
     "title": "A note on autumn colour",
@@ -227,10 +228,37 @@
     "label": "Image coming soon",
     "detail": "A little autumn will live here."
   },
+  "vendor": {
+    "eyebrow": "For prospective vendors",
+    "title": "Make an autumn morning together.",
+    "intro": "Thank you for your interest in joining Autumn Morning Market. Tell us a little about your shop, practice, or work using the form below.",
+    "conceptNote": "This is a concept-site demo form. Your details are not sent or stored.",
+    "form": {
+      "businessLabel": "Shop or practice name",
+      "businessHint": "For example: Autumn Bakehouse",
+      "contactLabel": "Contact name",
+      "contactHint": "For example: Hana Yamada",
+      "emailLabel": "Email address",
+      "emailHint": "For example: hello@example.jp",
+      "offeringLabel": "What would you bring?",
+      "offeringHint": "Tell us about what you would like to sell or share",
+      "noteLabel": "Questions or notes (optional)",
+      "noteHint": "Add any preferences or details",
+      "submit": "Send vendor interest",
+      "required": "This field is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "another": "Start another response"
+    },
+    "success": {
+      "title": "Thank you for getting in touch.",
+      "body": "Your vendor interest has been received. Someone will be in touch soon."
+    }
+  },
   "footer": {
     "message": "See you on an autumn morning.",
     "date": "Saturday, 10 October 2026 · 09:00–12:00",
     "official": "Official Shinjuku Gyoen website",
+    "vendorLink": "Vendor information",
     "copyright": "Autumn Morning Market · Concept website · 2026",
     "top": "Back to top"
   }

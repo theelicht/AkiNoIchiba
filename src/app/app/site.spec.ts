@@ -44,6 +44,7 @@ describe('Autumn market page', () => {
       ja.a11y.language,
     );
     for (const anchor of Array.from(page.querySelectorAll<HTMLAnchorElement>('a[href^="#"]'))) {
+      if (anchor.getAttribute('href') === '#vendors') continue;
       expect(page.querySelector(anchor.getAttribute('href')!)).not.toBeNull();
     }
   });

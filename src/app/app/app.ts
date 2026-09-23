@@ -1,28 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { SiteHeader } from '../layout/site-header/site-header';
 import { SiteFooter } from '../layout/site-footer/site-footer';
-import { SeasonNotice } from '../shared/season-notice/season-notice';
-import { Hero } from '../sections/hero/hero';
-import { About } from '../sections/about/about';
-import { Market } from '../sections/market/market';
-import { Programme } from '../sections/programme/programme';
-import { VisitorInfo } from '../sections/visitor-info/visitor-info';
-import { Access } from '../sections/access/access';
+import { HomePage } from '../pages/home-page/home-page';
+import { VendorPage } from '../pages/vendor-page/vendor-page';
 
 @Component({
-  imports: [
-    SiteHeader,
-    SiteFooter,
-    SeasonNotice,
-    Hero,
-    About,
-    Market,
-    Programme,
-    VisitorInfo,
-    Access,
-  ],
+  imports: [SiteHeader, SiteFooter, HomePage, VendorPage],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {}
+export class App {
+  readonly showVendor = signal(window.location.hash === '#vendors');
+
+  @HostListener('window:hashchange')
+  onHashChange(): void {
+    const fragment = window.location.hash.slice(1);
+    this.showVendor.set(fragment === 'vendors');
+    if (fragment && fragment !== 'vendors') {
+      setTimeout(() => document.getElementById(fragment)?.scrollIntoView());
+    }
+  }
+}

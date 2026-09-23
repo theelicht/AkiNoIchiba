@@ -20,7 +20,8 @@
     "about": "朝市について",
     "market": "楽しみ方",
     "visit": "ご来園案内",
-    "access": "アクセス"
+    "access": "アクセス",
+    "vendors": "出店について"
   },
   "seasonNotice": {
     "title": "紅葉についてのお知らせ",
@@ -227,10 +228,37 @@
     "label": "写真準備中",
     "detail": "秋の風景を、ここに。"
   },
+  "vendor": {
+    "eyebrow": "出店者の方へ",
+    "title": "秋の朝を、ともにつくる。",
+    "intro": "秋彩の朝市への出店に関心をお寄せいただき、ありがとうございます。下記のフォームから、ご紹介したいお店や活動についてお聞かせください。",
+    "conceptNote": "これはコンセプトサイト用のデモフォームです。入力内容は送信・保存されません。",
+    "form": {
+      "businessLabel": "お店・活動の名前",
+      "businessHint": "例：秋の焼き菓子店",
+      "contactLabel": "ご担当者名",
+      "contactHint": "例：山田 花子",
+      "emailLabel": "メールアドレス",
+      "emailHint": "例：hello@example.jp",
+      "offeringLabel": "出店内容",
+      "offeringHint": "販売・紹介したいものをお聞かせください",
+      "noteLabel": "ご質問・補足（任意）",
+      "noteHint": "ご希望などがあればご記入ください",
+      "submit": "出店希望を送信する",
+      "required": "この項目は必須です。",
+      "emailInvalid": "メールアドレスをご確認ください。",
+      "another": "別の内容で入力する"
+    },
+    "success": {
+      "title": "ご連絡ありがとうございます。",
+      "body": "出店希望を受け付けました。担当者より近日中にご連絡します。"
+    }
+  },
   "footer": {
     "message": "秋の朝に、お会いしましょう。",
     "date": "2026年10月10日（土）09:00–12:00",
     "official": "新宿御苑 公式サイト",
+    "vendorLink": "出店をご希望の方へ",
     "copyright": "秋彩の朝市 · コンセプトサイト · 2026",
     "top": "ページの先頭へ"
   }

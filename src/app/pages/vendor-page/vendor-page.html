@@ -1,0 +1,77 @@
+@let t = i18n.text().vendor;
+<main id="main" class="vendor-page" tabindex="-1">
+  <section class="container vendor-content" aria-labelledby="vendor-title">
+    <div class="vendor-intro">
+      <p class="eyebrow"><span aria-hidden="true">—</span> {{ t.eyebrow }}</p>
+      <h1 id="vendor-title">{{ t.title }}</h1>
+      <p>{{ t.intro }}</p>
+      <p class="concept-note"><app-leaf-mark aria-hidden="true" />{{ t.conceptNote }}</p>
+    </div>
+
+    <mat-card appearance="outlined">
+      @if (!submitted()) {
+        <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+          <mat-form-field appearance="outline">
+            <mat-label>{{ t.form.businessLabel }}</mat-label>
+            <input matInput formControlName="business" [placeholder]="t.form.businessHint" />
+            @if (form.controls.business.touched && form.controls.business.invalid) {
+              <mat-error>{{ t.form.required }}</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>{{ t.form.contactLabel }}</mat-label>
+            <input matInput formControlName="contact" [placeholder]="t.form.contactHint" />
+            @if (form.controls.contact.touched && form.controls.contact.invalid) {
+              <mat-error>{{ t.form.required }}</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>{{ t.form.emailLabel }}</mat-label>
+            <input matInput type="email" formControlName="email" [placeholder]="t.form.emailHint" />
+            @if (form.controls.email.touched && form.controls.email.invalid) {
+              <mat-error>{{
+                form.controls.email.hasError('email') ? t.form.emailInvalid : t.form.required
+              }}</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>{{ t.form.offeringLabel }}</mat-label>
+            <textarea
+              matInput
+              rows="4"
+              formControlName="offering"
+              [placeholder]="t.form.offeringHint"
+            ></textarea>
+            @if (form.controls.offering.touched && form.controls.offering.invalid) {
+              <mat-error>{{ t.form.required }}</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>{{ t.form.noteLabel }}</mat-label>
+            <textarea
+              matInput
+              rows="3"
+              formControlName="note"
+              [placeholder]="t.form.noteHint"
+            ></textarea>
+          </mat-form-field>
+
+          <button mat-flat-button type="submit">
+            {{ t.form.submit }} <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+      } @else {
+        <div class="success" role="status">
+          <app-leaf-mark aria-hidden="true" />
+          <h2>{{ t.success.title }}</h2>
+          <p>{{ t.success.body }}</p>
+          <button mat-button type="button" (click)="startAnother()">{{ t.form.another }} →</button>
+        </div>
+      }
+    </mat-card>
+  </section>
+</main>
