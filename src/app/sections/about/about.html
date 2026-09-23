@@ -1,0 +1,17 @@
+@let t = i18n.text().about;
+<section id="about" class="container section about" aria-labelledby="about-title">
+  <app-section-heading
+    [number]="t.number"
+    [eyebrow]="t.eyebrow"
+    [title]="t.title"
+    headingId="about-title"
+  />
+  <div class="story">
+    <p>{{ t.body }}</p>
+    <p>{{ t.detail }}</p>
+    <mat-chip-set
+      ><mat-chip>{{ t.tag }}</mat-chip></mat-chip-set
+    >
+    <p class="fine-print">{{ t.note }}</p>
+  </div>
+</section>

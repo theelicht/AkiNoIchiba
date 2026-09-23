@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  margin-bottom: 2.5rem;
+}
+h2 {
+  white-space: pre-line;
+}
+.section-number {
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+  font-family: var(--serif);
+}
+.section-intro {
+  color: var(--muted);
+  margin-top: 1rem;
+  max-width: 46rem;
+}

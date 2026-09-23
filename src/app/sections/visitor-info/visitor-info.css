@@ -1,0 +1,110 @@
+.visit {
+  background: #eeeadf;
+  border-block: 1px solid var(--line);
+}
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 26px;
+}
+mat-card {
+  border-color: var(--line);
+  background: var(--paper);
+  border-radius: 3px;
+}
+mat-card-content {
+  padding: 30px !important;
+}
+h3 {
+  font-size: 1.35rem;
+}
+.card-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.card-heading span {
+  font-size: 0.65rem;
+  color: var(--muted);
+}
+.prices {
+  margin: 20px 0;
+}
+.prices > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.prices dt {
+  font-size: 0.83rem;
+}
+.prices dd {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  white-space: nowrap;
+  color: var(--rust);
+}
+.hours {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  letter-spacing: 0.04em;
+  margin: 18px 0 0;
+}
+.last-entry {
+  font-size: 0.8rem;
+  color: var(--rust);
+  margin: 2px 0 16px;
+}
+mat-divider {
+  margin: 24px 0;
+  border-color: var(--line);
+}
+h4 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.event-hours {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+.visit-note {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 26px;
+}
+.visit-note p {
+  max-width: 650px;
+}
+.visit-note a {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+.visit-note span {
+  margin-left: 10px;
+}
+@media (max-width: 760px) {
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+  .visit-note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  mat-card-content {
+    padding: 24px !important;
+  }
+  .hours {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,10 @@
+@let notice = i18n.text().seasonNotice;
+<aside class="notice" aria-labelledby="season-notice-title">
+  <div class="notice-inner container">
+    <app-leaf-mark aria-hidden="true" />
+    <p>
+      <strong id="season-notice-title">{{ notice.title }}</strong>
+      <span>{{ notice.body }}</span>
+    </p>
+  </div>
+</aside>

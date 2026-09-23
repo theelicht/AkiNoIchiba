@@ -1,0 +1,88 @@
+footer {
+  background: #383d30;
+  color: #f2ecd9;
+  padding: 65px 0 26px;
+}
+.farewell {
+  text-align: center;
+  padding-bottom: 55px;
+}
+.farewell app-leaf-mark {
+  --leaf-size: 42px;
+  color: #c18b58;
+}
+.farewell h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 18px 0;
+  letter-spacing: 0.06em;
+}
+.farewell p {
+  font-size: 0.77rem;
+  color: #d3d0bf;
+  letter-spacing: 0.06em;
+}
+mat-divider {
+  border-color: #f2ecd926;
+}
+.footer-info {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 70px;
+  padding: 35px 0;
+}
+.footer-brand > span {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+}
+.footer-brand small {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  margin-top: 7px;
+  color: #d3d0bf;
+}
+.footer-brand a {
+  display: inline-block;
+  color: #e7dac4;
+  font-size: 0.7rem;
+  margin-top: 25px;
+  text-underline-offset: 4px;
+}
+.notice h3 {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.notice p {
+  font-size: 0.72rem;
+  line-height: 1.95;
+  color: #d3d0bf;
+}
+.footer-bottom {
+  border-top: 1px solid #f2ecd926;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 0.62rem;
+  color: #d3d0bf;
+}
+.footer-bottom a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer-bottom a span {
+  margin-left: 12px;
+}
+@media (max-width: 650px) {
+  .footer-info {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

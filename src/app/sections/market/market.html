@@ -1,0 +1,22 @@
+@let t = i18n.text().market;
+<section id="market" class="section market" aria-labelledby="market-title">
+  <div class="container">
+    <app-section-heading
+      [number]="t.number"
+      [eyebrow]="t.eyebrow"
+      [title]="t.title"
+      [intro]="t.intro"
+      headingId="market-title"
+    />
+    <div class="market-grid">
+      @for (item of t.items; track item.id; let i = $index) {
+        <app-market-card
+          [item]="item"
+          [imageSrc]="images[item.id]"
+          [imagePosition]="imagePositions[item.id] ?? 'center'"
+          [tone]="tones[i]"
+        />
+      }
+    </div>
+  </div>
+</section>

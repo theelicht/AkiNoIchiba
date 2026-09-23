@@ -1,0 +1,48 @@
+@let t = i18n.text().visit;
+<section id="visit" class="visit section" aria-labelledby="visit-title">
+  <div class="container">
+    <app-section-heading
+      [number]="t.number"
+      [eyebrow]="t.eyebrow"
+      [title]="t.title"
+      [intro]="t.intro"
+      headingId="visit-title"
+    />
+    <div class="visit-grid">
+      <mat-card appearance="outlined"
+        ><mat-card-content
+          ><div class="card-heading">
+            <h3>{{ t.admissionTitle }}</h3>
+            <span>{{ t.currencyNote }}</span>
+          </div>
+          <dl class="prices">
+            @for (price of t.prices; track $index) {
+              <div>
+                <dt>{{ price.label }}</dt>
+                <dd>{{ price.price }}</dd>
+              </div>
+            }
+          </dl>
+          <p class="fine-print">{{ t.proof }}</p></mat-card-content
+        ></mat-card
+      ><mat-card appearance="outlined"
+        ><mat-card-content
+          ><h3>{{ t.hoursTitle }}</h3>
+          <p class="hours">{{ t.hours }}</p>
+          <p class="last-entry">{{ t.lastEntry }}</p>
+          <p class="fine-print">{{ t.closure }}</p>
+          <mat-divider />
+          <h4>{{ t.eventTitle }}</h4>
+          <p class="event-hours">{{ t.eventHours }}</p>
+          <span class="fine-print">{{ t.eventNote }}</span></mat-card-content
+        ></mat-card
+      >
+    </div>
+    <div class="visit-note">
+      <p class="fine-print">{{ t.checked }}</p>
+      <a mat-stroked-button [href]="links[i18n.locale()].admission"
+        >{{ t.official }} <span aria-hidden="true">↗</span></a
+      >
+    </div>
+  </div>
+</section>

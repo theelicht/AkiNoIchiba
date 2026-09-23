@@ -1,0 +1,47 @@
+@let t = i18n.text().hero;
+<section class="hero container" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="tiny-line" aria-hidden="true"></span>{{ t.eyebrow }}</p>
+    <h1 id="hero-title">
+      <span>{{ t.titleFirst }}</span
+      ><span>{{ t.titleSecond }}</span>
+    </h1>
+    <p class="hero-description">{{ t.description }}</p>
+    <div class="event-meta">
+      <div>
+        <time datetime="2026-10-10">{{ t.date }}</time
+        ><span class="day">{{ t.day }}</span>
+      </div>
+      <div class="time-row">
+        <strong>{{ t.time }}</strong
+        ><span>{{ t.timeNote }}</span>
+      </div>
+      <p class="location"><span aria-hidden="true">⌖</span> {{ t.location }}</p>
+    </div>
+    <div class="hero-actions">
+      <a mat-flat-button href="#market">{{ t.cta }} <span aria-hidden="true">↗</span></a
+      ><a mat-button href="#access">{{ t.secondary }} <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <figure>
+    <div class="picture-mount">
+      <app-image-frame
+        [label]="t.image"
+        src="images/shinjuku-gyoen-autumn.jpg"
+        alternateSrc="images/shinjuku-kimono-gingko.webp"
+        imagePosition="58% center"
+        alternatePosition="center 42%"
+        [hero]="true"
+      />
+      <div class="seal" aria-hidden="true">
+        <span>{{ t.sealTop }}</span
+        ><span>{{ t.sealBottom }}</span>
+      </div>
+    </div>
+    <figcaption><span class="caption-line" aria-hidden="true"></span>{{ t.caption }}</figcaption>
+  </figure>
+</section>
+<div class="hero-bottom container">
+  <span>{{ t.scroll }}</span
+  ><span aria-hidden="true">↓</span><app-leaf-mark />
+</div>

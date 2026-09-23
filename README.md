@@ -1,59 +1,39 @@
-# Proposal
+# 秋彩の朝市 · Autumn Morning Market
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+A Japanese-first Angular 22 / Angular Material concept page for 10 October 2026, 09:00–12:00 (Japan time).
 
-## Development server
+## Run locally
 
-To start a local development server, run:
-
-```bash
-ng serve
+```sh
+npm install
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open http://localhost:4200. Use `npm run build` for a production build in `dist/Proposal/browser`, and `npm test -- --watch=false` for the focused Vitest suite.
 
-## Code scaffolding
+## Content and language
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Edit `public/i18n/ja.json` and `public/i18n/en.json`. All page copy, accessible labels, programme entries, market cards, admission information, and directions live here. Keep both files structurally identical; the tests check this, including array entries. The TypeScript translation schema is inferred from the Japanese dictionary.
 
-```bash
-ng generate component component-name
-```
+Both dictionaries are loaded through HttpClient. Japanese is also bundled as an emergency fallback, so a failed initial request does not leave a blank page. Missing or incorrectly typed English values fall back individually to Japanese; a failed English request switches the whole page back to Japanese. The most recent language selection wins if requests finish out of order.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Every new visit starts in Japanese as requested. An explicit selection is stored under `autumn-market-locale` for reference, but intentionally is not restored on reload. Language changes update the document language, title, description and official links without navigation.
 
-```bash
-ng generate --help
-```
+## Components and styling
 
-## Building
+- `src/app/sections`: hero, introduction, market, programme, admission and access sections.
+- `src/app/shared`: reusable image frames, section headings, market/access cards and leaf decoration.
+- `src/app/layout`: sticky header, language selector and footer.
+- `src/styles.scss`: Material theme, autumn colours, typography, focus styles and reduced-motion handling.
 
-To build the project run:
+Each component has its own directory containing matching `.ts`, `.html`, and `.css` files (for example, `src/app/sections/hero/hero.ts`, `hero.html`, and `hero.css`). The root component and page integration tests live in `src/app/app/`. Component decorators reference external templates and styles; shared theme styles remain in `src/styles.scss`.
 
-```bash
-ng build
-```
+The reusable image frame renders local photography or a localized placeholder, supports per-image focal points, and can crossfade between two hero images. Current photos live in `public/images`: the hero cycles between the two supplied Shinjuku Gyoen photographs; food and ceramics use the supplied image candidates; and tea and garden sketching use locally stored Pexels photographs. Photo source pages: [tea and wagashi](https://www.pexels.com/photo/traditional-japanese-tea-and-sweet-on-tatami-mat-32330102/) by Viridiana Rivera and [garden sketching](https://www.pexels.com/photo/person-drawing-an-artwork-7859134/) by Greta Hoffman. The hero remains static when the visitor requests reduced motion.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Material 22 includes native component animations; no deprecated Angular animations provider is needed. The reduced-motion stylesheet suppresses animations and smooth scrolling when requested by the operating system. System fonts avoid external font requests.
 
-## Running unit tests
+## Visitor information
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Garden information was checked on 23 September 2026 against the Ministry of the Environment's admission and access pages. Links are centralized in `src/app/core/links.ts`. Recheck official fees, operating hours and station exits before sharing the page.
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The event is fictional. The translated footer contains the agreed concept disclosure and non-affiliation notice. There is no booking flow, payment collection or backend. No hosting or deployment is configured.

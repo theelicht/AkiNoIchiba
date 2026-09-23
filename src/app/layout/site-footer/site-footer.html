@@ -1,0 +1,28 @@
+@let t = i18n.text().footer;
+<footer>
+  <div class="container">
+    <div class="farewell">
+      <app-leaf-mark />
+      <h2>{{ t.message }}</h2>
+      <p>{{ t.date }}</p>
+    </div>
+    <mat-divider />
+    <div class="footer-info">
+      <div class="footer-brand">
+        <span>{{ i18n.text().brand.name }}</span
+        ><small>{{ i18n.text().brand.place }}</small
+        ><a [href]="links[i18n.locale()].home"
+          >{{ t.official }} <span aria-hidden="true">↗</span></a
+        >
+      </div>
+      <div class="notice">
+        <h3>{{ t.noticeTitle }}</h3>
+        <p>{{ t.notice }}</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>{{ t.copyright }}</span
+      ><a href="#top">{{ t.top }} <span aria-hidden="true">↑</span></a>
+    </div>
+  </div>
+</footer>

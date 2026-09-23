@@ -1,0 +1,29 @@
+@let t = i18n.text();
+<a class="skip-link" href="#main">{{ t.a11y.skip }}</a>
+<mat-toolbar>
+  <div class="header-inner">
+    <a class="brand" href="#top">
+      <app-leaf-mark />
+      <span>
+        <strong>{{ t.brand.name }}</strong>
+        <small>{{ t.brand.place }}</small>
+      </span>
+    </a>
+    <nav [attr.aria-label]="t.a11y.navigation">
+      <a href="#about">{{ t.navigation.about }}</a>
+      <a href="#market">{{ t.navigation.market }}</a>
+      <a href="#visit">{{ t.navigation.visit }}</a>
+      <a href="#access">{{ t.navigation.access }}</a>
+    </nav>
+    <mat-button-toggle-group
+      [value]="i18n.locale()"
+      (change)="changeLanguage($event.value)"
+      [attr.aria-label]="t.a11y.language"
+      [matTooltip]="t.a11y.languageHint"
+      hideSingleSelectionIndicator
+    >
+      <mat-button-toggle value="ja" lang="ja">{{ t.a11y.japanese }}</mat-button-toggle>
+      <mat-button-toggle value="en" lang="en">{{ t.a11y.english }}</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</mat-toolbar>

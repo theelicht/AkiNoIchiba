@@ -1,0 +1,34 @@
+@let t = i18n.text().access;
+<section id="access" class="container section" aria-labelledby="access-title">
+  <app-section-heading
+    [number]="t.number"
+    [eyebrow]="t.eyebrow"
+    [title]="t.title"
+    [intro]="t.intro"
+    headingId="access-title"
+  />
+  <div class="access-grid">
+    @for (gate of t.gates; track gate.id) {
+      <app-access-card [gate]="gate" />
+    }
+  </div>
+  <div class="map-panel">
+    <div class="map-decoration" aria-hidden="true"><app-leaf-mark /></div>
+    <div>
+      <p class="eyebrow">{{ i18n.text().brand.place }}</p>
+      <p class="address">{{ t.address }}</p>
+    </div>
+    <a
+      mat-flat-button
+      href="https://www.google.com/maps/search/?api=1&query=Shinjuku+Gyoen+National+Garden"
+      [attr.aria-label]="t.mapCta + ' · ' + t.mapLabel"
+      >{{ t.mapCta }} <span aria-hidden="true">↗</span></a
+    >
+  </div>
+  <div class="access-note">
+    <p class="fine-print">{{ t.note }}</p>
+    <a class="text-link" [href]="links[i18n.locale()].access"
+      >{{ t.official }} <span aria-hidden="true">↗</span></a
+    >
+  </div>
+</section>

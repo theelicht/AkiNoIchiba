@@ -1,0 +1,20 @@
+@let t = i18n.text().programme;
+<section class="container section" aria-labelledby="programme-title">
+  <app-section-heading
+    [number]="t.number"
+    [eyebrow]="t.eyebrow"
+    [title]="t.title"
+    [intro]="t.intro"
+    headingId="programme-title"
+  />
+  <ol class="timeline">
+    @for (item of t.items; track item.time) {
+      <li>
+        <time [attr.datetime]="'2026-10-10T' + item.time + ':00+09:00'">{{ item.time }}</time
+        ><span class="dot" aria-hidden="true"></span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </li>
+    }
+  </ol>
+</section>

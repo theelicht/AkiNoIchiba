@@ -1,0 +1,32 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: start;
+}
+.story {
+  padding-top: 40px;
+}
+.story > p {
+  font-size: 0.9rem;
+  line-height: 2.2;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.story .fine-print {
+  font-size: 0.72rem;
+  line-height: 1.8;
+  margin: 13px 0 0;
+}
+@media (max-width: 760px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .story {
+    padding-top: 0;
+  }
+  app-section-heading {
+    margin-bottom: 24px;
+  }
+}

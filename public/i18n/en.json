@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "title": "Autumn Morning Market | Shinjuku Gyoen · October 10",
+    "description": "A little autumn, a little discovery. An autumn morning market on October 10, from 9 am to noon."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "navigation": "Main navigation",
+    "language": "Display language",
+    "japanese": "日本語",
+    "english": "English",
+    "languageHint": "Change the display language",
+    "external": "External website"
+  },
+  "brand": {
+    "name": "Autumn Morning Market",
+    "place": "Shinjuku Gyoen"
+  },
+  "navigation": {
+    "about": "Our morning",
+    "market": "Discover",
+    "visit": "Plan your visit",
+    "access": "Getting here"
+  },
+  "seasonNotice": {
+    "title": "A note on autumn colour",
+    "body": "Due to this year's prolonged heat waves, autumn colours may not be fully present by October 10. We hope that won't stop you from visiting our small autumn market in the heart of Tokyo."
+  },
+  "hero": {
+    "eyebrow": "One day. One autumn morning.",
+    "titleFirst": "Gather a little autumn.",
+    "titleSecond": "Find a slower morning.",
+    "description": "A soft breeze through the trees.\nSeasonal flavours, thoughtful crafts,\nand a small autumn market in Shinjuku Gyoen.",
+    "date": "10 October 2026",
+    "day": "Saturday",
+    "time": "09:00 — 12:00",
+    "timeNote": "For this morning only",
+    "location": "Shinjuku Gyoen · Tokyo",
+    "cta": "Explore the morning",
+    "secondary": "Find your way",
+    "sealTop": "A little",
+    "sealBottom": "autumn",
+    "caption": "A quiet moment, in an autumn garden.",
+    "image": "Morning light in the garden",
+    "scroll": "Find your own autumn moment."
+  },
+  "about": {
+    "number": "01",
+    "eyebrow": "Our morning",
+    "title": "Wake a little earlier.\nMeet a little autumn.",
+    "body": "Step away from the everyday for a while. Discover the flavours of the season and the care of handmade things, with a whole morning to wander at your own pace.",
+    "detail": "Pause over a cup of tea or find something lovely to take home. This one-morning market is an invitation to notice the small joys of autumn.",
+    "tag": "October 10 · Morning only",
+    "note": "The market is free to enjoy. Normal garden admission applies separately."
+  },
+  "market": {
+    "number": "02",
+    "eyebrow": "Discover the market",
+    "title": "Taste. Discover. Take a little home.",
+    "intro": "Four ways to enjoy the season.",
+    "items": [
+      {
+        "id": "food",
+        "number": "01",
+        "category": "Seasonal flavours",
+        "title": "A taste of autumn",
+        "description": "Chestnut treats, sweet-potato sweets and freshly baked delights. Follow the comforting aromas to a delicious morning detour.",
+        "image": "Chestnut and sweet-potato pastries",
+        "tag": "Something sweet"
+      },
+      {
+        "id": "craft",
+        "number": "02",
+        "category": "Everyday craft",
+        "title": "Made with care",
+        "description": "Ceramics, textiles and the warmth of wood. Find a thoughtfully made piece to bring a little autumn into your everyday.",
+        "image": "Handmade ceramics and small crafts",
+        "tag": "Find a favourite"
+      },
+      {
+        "id": "tea",
+        "number": "03",
+        "category": "Time to pause",
+        "title": "A moment for tea",
+        "description": "Fragrant roasted hojicha and seasonal teas. Settle in, breathe in the garden air and let the morning unfold a little more slowly.",
+        "image": "A warm cup of tea and Japanese sweets",
+        "tag": "Follow the fragrance"
+      },
+      {
+        "id": "garden",
+        "number": "04",
+        "category": "Closer to nature",
+        "title": "A garden wander",
+        "description": "The shape of a leaf, shifting light, a bird's call. Walk and sketch your way through the garden to find your own autumn scene.",
+        "image": "A garden path and a sketchbook",
+        "tag": "Take the slow path"
+      }
+    ]
+  },
+  "programme": {
+    "number": "03",
+    "eyebrow": "The morning unfolds",
+    "title": "A little journey, in three hours.",
+    "intro": "From nine until noon. Follow your curiosity.",
+    "items": [
+      {
+        "time": "09:00",
+        "title": "The morning begins",
+        "description": "Step into autumn as the garden opens. Start with the stalls that catch your eye."
+      },
+      {
+        "time": "10:00",
+        "title": "Crafts and a cup of tea",
+        "description": "Find something special, then take a break with a warming cup."
+      },
+      {
+        "time": "11:00",
+        "title": "A gentle garden stroll",
+        "description": "Carry the morning into a walk. Notice the small changes of the season."
+      },
+      {
+        "time": "12:00",
+        "title": "Until another season",
+        "description": "The market closes at noon. Your time in the garden can continue."
+      }
+    ]
+  },
+  "visit": {
+    "number": "04",
+    "eyebrow": "Plan your visit",
+    "title": "Before your morning out.",
+    "intro": "The market is free to enjoy. Garden admission is charged separately.",
+    "admissionTitle": "Garden admission",
+    "currencyNote": "Per person · tax included",
+    "prices": [
+      {
+        "label": "Adults",
+        "price": "¥500"
+      },
+      {
+        "label": "Age 65 and over",
+        "price": "¥250"
+      },
+      {
+        "label": "Students (high school and above)",
+        "price": "¥250"
+      },
+      {
+        "label": "Children (junior high school and below)",
+        "price": "Free"
+      }
+    ],
+    "proof": "Please bring proof of age or student status when using a discounted admission rate.",
+    "hoursTitle": "October garden hours",
+    "hours": "09:00 — 16:30",
+    "lastEntry": "Last admission at 16:00",
+    "closure": "Closed Mondays, or the next weekday when Monday is a public holiday. Check the official website for temporary changes.",
+    "eventTitle": "Market hours",
+    "eventHours": "Saturday, October 10 · 09:00 — 12:00",
+    "eventNote": "One day · Morning only",
+    "official": "Official admission information",
+    "checked": "Garden information checked on September 23, 2026. Fees and opening arrangements may change. Please check official information before travelling."
+  },
+  "access": {
+    "number": "05",
+    "eyebrow": "Getting here",
+    "title": "A green escape, in the heart of Tokyo.",
+    "intro": "Choose one of three garden entrances to suit your journey.",
+    "address": "11 Naito-machi, Shinjuku-ku, Tokyo 160-0014",
+    "mapLabel": "Map of the Shinjuku Gyoen area",
+    "mapCta": "Open map",
+    "official": "Official access information",
+    "note": "Walking times are approximate. Public transport is recommended.",
+    "gates": [
+      {
+        "id": "shinjuku",
+        "name": "Shinjuku Gate",
+        "tag": "From Shinjuku Station",
+        "routes": [
+          {
+            "station": "JR / Keio / Odakyu · Shinjuku, South Exit",
+            "walk": "About 10 min on foot"
+          },
+          {
+            "station": "Marunouchi Line · Shinjuku-gyoemmae, Exit 1",
+            "walk": "About 5 min on foot"
+          },
+          {
+            "station": "Fukutoshin Line · Shinjuku-sanchome, Exit E5",
+            "walk": "About 5 min on foot"
+          }
+        ]
+      },
+      {
+        "id": "okido",
+        "name": "Okido Gate",
+        "tag": "From Shinjuku-gyoemmae",
+        "routes": [
+          {
+            "station": "Marunouchi Line · Shinjuku-gyoemmae, Exit 2",
+            "walk": "About 5 min on foot"
+          }
+        ]
+      },
+      {
+        "id": "sendagaya",
+        "name": "Sendagaya Gate",
+        "tag": "From Sendagaya Station",
+        "routes": [
+          {
+            "station": "JR Sobu Line · Sendagaya",
+            "walk": "About 5 min on foot"
+          },
+          {
+            "station": "Oedo Line · Kokuritsu-kyogijo, Exit A5",
+            "walk": "About 5 min on foot"
+          },
+          {
+            "station": "Fukutoshin Line · Kita-sando, Exit 1",
+            "walk": "About 10 min on foot"
+          }
+        ]
+      }
+    ]
+  },
+  "placeholder": {
+    "label": "Image coming soon",
+    "detail": "A little autumn will live here."
+  },
+  "footer": {
+    "message": "See you on an autumn morning.",
+    "date": "Saturday, 10 October 2026 · 09:00–12:00",
+    "noticeTitle": "About this website",
+    "notice": "Autumn Morning Market is a fictional event concept, not an event that will actually take place. This website is not affiliated with or endorsed by Shinjuku Gyoen, Japan's Ministry of the Environment, or the garden operator. Please consult the official website for garden admission and access information.",
+    "official": "Official Shinjuku Gyoen website",
+    "copyright": "Autumn Morning Market · Concept website · 2026",
+    "top": "Back to top"
+  }
+}

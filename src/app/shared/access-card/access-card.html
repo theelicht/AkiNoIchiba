@@ -1,0 +1,14 @@
+<mat-card appearance="outlined"
+  ><mat-card-content
+    ><span class="gate-tag">{{ gate().tag }}</span>
+    <h3><span aria-hidden="true">⌖</span> {{ gate().name }}</h3>
+    <ul>
+      @for (route of gate().routes; track $index) {
+        <li>
+          <span>{{ route.station }}</span
+          ><strong>{{ route.walk }}</strong>
+        </li>
+      }
+    </ul></mat-card-content
+  ></mat-card
+>

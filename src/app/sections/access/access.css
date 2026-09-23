@@ -1,0 +1,67 @@
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.map-panel {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  border: 1px solid var(--line);
+  background: #e4e7d9;
+  margin-top: 26px;
+  padding: 26px 32px;
+}
+.map-decoration {
+  border: 1px solid #a0aa91;
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--moss);
+}
+.address {
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+.map-panel a {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+.map-panel a span {
+  margin-left: 15px;
+}
+.access-note {
+  margin-top: 22px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-link {
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+@media (max-width: 760px) {
+  .access-grid {
+    grid-template-columns: 1fr;
+  }
+  .map-panel {
+    padding: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .map-decoration {
+    display: none;
+  }
+  .map-panel a {
+    margin-left: 0;
+  }
+  .access-note {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

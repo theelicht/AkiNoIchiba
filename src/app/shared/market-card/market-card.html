@@ -1,0 +1,16 @@
+<mat-card appearance="outlined"
+  ><app-image-frame
+    [label]="item().image"
+    [src]="imageSrc()"
+    [imagePosition]="imagePosition()"
+    [tone]="tone()"
+  /><mat-card-content
+    ><div class="card-kicker">
+      <span>{{ item().number }}</span
+      >{{ item().category }}
+    </div>
+    <h3>{{ item().title }}</h3>
+    <p>{{ item().description }}</p>
+    <span class="tag"><span aria-hidden="true">✧</span> {{ item().tag }}</span></mat-card-content
+  ></mat-card
+>

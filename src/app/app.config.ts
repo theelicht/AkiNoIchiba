@@ -1,10 +1,16 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
-import { routes } from './app.routes';
+import {
+  ApplicationConfig,
+  inject,
+  provideAppInitializer,
+  provideBrowserGlobalErrorListeners,
+} from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
+import { I18nService } from './core/i18n.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideHttpClient(),
+    provideAppInitializer(() => inject(I18nService).initialize()),
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes)
-  ]
+  ],
 };

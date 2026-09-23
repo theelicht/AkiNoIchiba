@@ -1,0 +1,36 @@
+<div class="frame" [class.has-image]="src()">
+  @if (src()) {
+    <img
+      class="photo photo-primary"
+      [src]="src()"
+      [alt]="label()"
+      [style.object-position]="imagePosition()"
+    />
+    @if (alternateSrc()) {
+      <img
+        class="photo photo-alternate"
+        [src]="alternateSrc()"
+        alt=""
+        [style.object-position]="alternatePosition()"
+      />
+    }
+  }
+  <div class="frame-border"></div>
+  <span class="corner top-left" aria-hidden="true"></span
+  ><span class="corner bottom-right" aria-hidden="true"></span>
+  @if (!src()) {
+    <div
+      class="placeholder"
+      role="img"
+      [attr.aria-label]="label() + ' · ' + i18n.text().placeholder.label"
+    >
+      <app-leaf-mark /><span class="image-label">{{ label() }}</span
+      ><span class="coming">{{ i18n.text().placeholder.label }}</span>
+      @if (hero()) {
+        <span class="detail">{{ i18n.text().placeholder.detail }}</span>
+      }
+    </div>
+    <span class="leaf leaf-one" aria-hidden="true"><app-leaf-mark /></span
+    ><span class="leaf leaf-two" aria-hidden="true"><app-leaf-mark /></span>
+  }
+</div>
