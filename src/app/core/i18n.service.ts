@@ -61,6 +61,7 @@ export class I18nService {
     } catch {
       selected = 'ja';
       text = this.japanese;
+
     }
     if (requestId !== this.requestId) return;
     this.text.set(text);
