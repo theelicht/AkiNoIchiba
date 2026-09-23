@@ -39,7 +39,7 @@ describe('Autumn market page', () => {
     ).toBe('center 72%');
     for (const price of ja.visit.prices)
       expect(page.querySelector('.prices')?.textContent).toContain(price.price);
-    expect(page.querySelector('footer')?.textContent).toContain(ja.footer.notice);
+    expect(page.querySelector('footer')?.textContent).toContain(ja.footer.copyright);
     expect(page.querySelector('mat-button-toggle-group')?.getAttribute('aria-label')).toBe(
       ja.a11y.language,
     );
@@ -60,7 +60,7 @@ describe('Autumn market page', () => {
     expect(page.querySelector('app-season-notice')?.textContent).toContain(en.seasonNotice.body);
     expect(page.querySelector('app-market-card')?.textContent).toContain(en.market.items[0].title);
     expect(page.querySelector('app-access-card')?.textContent).toContain(en.access.gates[0].name);
-    expect(page.querySelector('footer')?.textContent).toContain(en.footer.notice);
+    expect(page.querySelector('footer')?.textContent).toContain(en.footer.copyright);
     expect(page.querySelector('.prices')?.textContent).toContain('¥500');
     expect(page.querySelector('mat-button-toggle-group')?.getAttribute('aria-label')).toBe(
       en.a11y.language,

@@ -25,9 +25,6 @@ mat-divider {
   border-color: #f2ecd926;
 }
 .footer-info {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 70px;
   padding: 35px 0;
 }
 .footer-brand > span {
@@ -49,17 +46,6 @@ mat-divider {
   margin-top: 25px;
   text-underline-offset: 4px;
 }
-.notice h3 {
-  font-family: var(--sans);
-  font-size: 0.74rem;
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-.notice p {
-  font-size: 0.72rem;
-  line-height: 1.95;
-  color: #d3d0bf;
-}
 .footer-bottom {
   border-top: 1px solid #f2ecd926;
   padding-top: 22px;
@@ -77,10 +63,6 @@ mat-divider {
   margin-left: 12px;
 }
 @media (max-width: 650px) {
-  .footer-info {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
   .footer-bottom {
     flex-direction: column;
     gap: 15px;

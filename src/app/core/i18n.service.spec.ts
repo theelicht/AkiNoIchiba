@@ -73,7 +73,7 @@ describe('Runtime translations', () => {
     const initialized = service.initialize();
     http.expectOne('i18n/ja.json').error(new ProgressEvent('error'));
     await initialized;
-    expect(service.text().footer.notice).toBe(ja.footer.notice);
+    expect(service.text().footer.copyright).toBe(ja.footer.copyright);
     expect(service.loading()).toBe(false);
   });
 
@@ -98,7 +98,7 @@ describe('Runtime translations', () => {
     expect(partial.market.items[0].title).toBe('Test card');
     expect(partial.market.items[0].description).toBe(ja.market.items[0].description);
     expect(partial.market.items.length).toBe(4);
-    expect(partial.footer.notice).toBe(ja.footer.notice);
+    expect(partial.footer.copyright).toBe(ja.footer.copyright);
   });
 
   it('ships identical nonempty dictionary structures in both languages', () => {
